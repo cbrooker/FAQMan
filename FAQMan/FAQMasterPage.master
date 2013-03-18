@@ -1,0 +1,35 @@
+﻿<%@ Master Language="VB" CodeFile="FAQMasterPage.master.vb" Inherits="Welcome_WelcomeMasterPage" %>
+
+<%@ Register Assembly="System.Web.Extensions, Version=1.0.61025.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35" Namespace="System.Web.UI" TagPrefix="asp" %>
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html lang="en" xml:lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head id="Head1" runat="server">
+    <title>FAQ Man</title>
+    <link href="style.css" rel="stylesheet" type="text/css" />
+    <script type="text/javascript" src="JScript.js"></script>
+    <link rel="shortcut icon" href="" type="image/ico" />
+    <asp:ContentPlaceHolder id="head" runat="server"></asp:ContentPlaceHolder>
+</head>
+<body>
+    <form id="form1" runat="server">
+    <asp:ScriptManager ID="ScriptManager1" runat="server">
+    </asp:ScriptManager>
+        <div id="container">
+            <div id="">
+                <!--/*** Put menu here ***/-->
+                <asp:ContentPlaceHolder ID="MenuPlaceHolder" runat="server">
+                </asp:ContentPlaceHolder>
+                <!--/*** end menu here ***/-->
+            </div>
+
+            <div id="contentContainer">
+                <asp:ContentPlaceHolder id="MainPlaceHolder" runat="server">
+                </asp:ContentPlaceHolder>
+            </div>
+            <div id="footer">Awesomesause 2009</div>
+        </div>
+    </form>
+</body>
+</html>

@@ -1,0 +1,76 @@
+﻿<%@ Master Language="VB" CodeFile="FAQAdminMasterPage.master.vb" Inherits="Welcome_WelcomeMasterPage" %>
+
+<%@ Register Assembly="System.Web.Extensions, Version=1.0.61025.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35" Namespace="System.Web.UI" TagPrefix="asp" %>
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html lang="en" xml:lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head id="Head1" runat="server">
+    <title>Managed IT Services, Network Management - itControl</title>
+    <link href="../style.css" rel="stylesheet" type="text/css" />
+    <script type="text/javascript" src="../JScript.js"></script>
+    <link rel="shortcut icon" href="../ITControlFavicon.ico" type="image/ico" />
+    <asp:ContentPlaceHolder id="head" runat="server"></asp:ContentPlaceHolder>
+</head>
+<body onLoad="LoadInit();">
+    <form id="form1" runat="server">
+    <asp:ScriptManager ID="ScriptManager1" runat="server">
+    </asp:ScriptManager>
+        <div id="container">
+            <div id="mainMenuReseller">
+                <!--/*** Put menu here ***/-->
+                <table cellpadding="0" cellspacing="0">
+                    <tr>
+                        <td>
+                            <table cellpadding="0" cellspacing="0">
+                                <tr>
+                                    <td rowspan="3"><a href="Default.aspx" onclick="javascript: pageTracker._trackPageview('/Welcomedefault')"><img src="../images/Header_SuiteLogo.jpg" border="0" alt="" /></a></td>
+                                    <td rowspan="2"><img src="../images/Header_DoodTop.jpg" alt="" /></td>
+                                    <td valign="top"><img src="../images/Header_TextAreaTop.jpg" alt="" /></td>
+                                </tr>
+                                <tr>
+                                    <td valign="top" class="Header_TextAreaMiddle" id="fade2"></td>
+                                </tr>
+                                <tr>
+                                    <td><img src="../images/Header_DoodBottom.jpg" alt="" /></td>
+                                    <td><img src="../images/Header_TextAreaSub.jpg" alt="" /></td>
+                                </tr>
+                            </table>
+                            <asp:ContentPlaceHolder ID="MenuPlaceHolder" runat="server">
+                            </asp:ContentPlaceHolder>
+                        </td>
+                    </tr>
+                </table>
+                <!--/*** end menu here ***/-->
+            </div>
+            <div id="contentContainer">
+                <table class="contentTable">
+                    <tr>
+                        <asp:ContentPlaceHolder id="LeftColumnPlaceHolder" runat="server">
+                            <td class="leftColumn" valign="top">
+
+                            </td>
+                        </asp:ContentPlaceHolder>
+                        <td rowspan="2" class="rightColumn3" valign="top">
+                            <asp:ContentPlaceHolder id="RightColumnPlaceHolder" runat="server">
+                            </asp:ContentPlaceHolder>
+                        </td>
+                    </tr>
+                    <asp:ContentPlaceHolder id="LeftBottomColumnPlaceHolder" runat="server">
+                    </asp:ContentPlaceHolder>
+                </table>
+            </div>
+            <div id="footer">itControl Solutions Inc. © 2008</div>
+        </div>
+    </form>
+    <script type="text/javascript">
+var gaJsHost = (("https:" == document.location.protocol) ? "https://ssl." : "http://www.");
+document.write(unescape("%3Cscript src='" + gaJsHost + "google-analytics.com/ga.js' type='text/javascript'%3E%3C/script%3E"));
+</script>
+<script type="text/javascript">
+try {
+var pageTracker = _gat._getTracker("UA-3669328-2");
+pageTracker._trackPageview();
+} catch(err) {}</script>
+</body>
+</html>
