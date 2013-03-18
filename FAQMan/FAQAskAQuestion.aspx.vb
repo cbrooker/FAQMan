@@ -16,15 +16,15 @@ Partial Class Welcome_AskAQuestion
         'Next
     End Sub
 
-    Protected Sub SubmitQuestion_Click(ByVal sender As Object, ByVal e As System.EventArgs) Handles SubmitQuestion.Click
+    Private Sub SubmitQuestion_Click(ByVal sender As Object, ByVal e As System.EventArgs) Handles SubmitQuestion.Click
 
-        Dim FAQTA As New FAQTableAdapters.FAQTableAdapter
-        Dim FAQSTA As New FAQTableAdapters.FAQStatusesTableAdapter
-        Dim FAQTTA As New FAQTableAdapters.FAQTopicsTableAdapter
+        Dim faqta As New FAQTableAdapters.FAQTableAdapter
+        Dim faqsta As New FAQTableAdapters.FAQStatusesTableAdapter
+        Dim faqtta As New FAQTableAdapters.FAQTopicsTableAdapter
 
-        Dim QuestionID As Integer = FAQTA.InsertQuestion(Session("PreSalesUserID"), Now(), FAQTTA.GetTopicIDByTopic("General Questions"), Question.Text, "", False, FAQSTA.GetStatusIDByStatus("Pending"), "", String.Format("Question submitted by: {0} ({1})", Name.Text, EmailAddress.Text), True)
+        Dim questionId As Integer = faqta.InsertQuestion(Session("PreSalesUserID"), Now(), CType(faqtta.GetTopicIDByTopic("General Questions"), Integer), Question.Text, "", False, CType(faqsta.GetStatusIDByStatus("Pending"), Integer), "", String.Format("Question submitted by: {0} ({1})", Name.Text, EmailAddress.Text), True)
 
-        Message.Text = "<br />Your question has been submitted. Your ticket number is: " & QuestionID
+        Message.Text = "<br />Your question has been submitted. Your ticket number is: " & questionId
         Message.Visible = True
     End Sub
 

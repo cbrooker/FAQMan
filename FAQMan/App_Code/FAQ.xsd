@@ -9,7 +9,7 @@
         <Tables>
           <TableAdapter BaseClass="System.ComponentModel.Component" DataAccessorModifier="AutoLayout, AnsiClass, Class, Public" DataAccessorName="FAQTableAdapter" GeneratorDataComponentClassName="FAQTableAdapter" Name="FAQ" UserDataComponentName="FAQTableAdapter">
             <MainSource>
-              <DbSource ConnectionRef="FAQConnectionString (Web.config)" DbObjectType="Unknown" FillMethodModifier="Public" FillMethodName="FillFAQ" GenerateMethods="Both" GenerateShortCommands="false" GeneratorGetMethodName="GetFAQData" GeneratorSourceName="FillFAQ" GetMethodModifier="Public" GetMethodName="GetFAQData" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="false" UserGetMethodName="GetFAQData" UserSourceName="FillFAQ">
+              <DbSource ConnectionRef="FAQConnectionString (Web.config)" DbObjectType="Unknown" FillMethodModifier="Public" FillMethodName="FillFAQ" GenerateMethods="Both" GenerateShortCommands="false" GeneratorGetMethodName="GetFAQData" GeneratorSourceName="FillFAQ" GetMethodModifier="Public" GetMethodName="GetFAQData" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="false" UserGetMethodName="GetFAQData" UserSourceName="FillFAQ">
                 <SelectCommand>
                   <DbCommand CommandType="Text" ModifiedByUser="true">
                     <CommandText>Select F.*, S.Status, T.Topic from FAQ F, FAQStatuses S, FAQTopics T
@@ -36,7 +36,7 @@ and F.IsActive=1 and F.IsPublic=1</CommandText>
               <Mapping SourceColumn="UserId" DataSetColumn="UserId" />
             </Mappings>
             <Sources>
-              <DbSource ConnectionRef="FAQConnectionString (Web.config)" DbObjectName="" DbObjectType="Unknown" GenerateShortCommands="true" GeneratorSourceName="DeleteFAQByID" Modifier="Public" Name="DeleteFAQByID" QueryType="NoData" ScalarCallRetval="System.Object, mscorlib, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetDataBy" UserSourceName="DeleteFAQByID">
+              <DbSource ConnectionRef="FAQConnectionString (Web.config)" DbObjectName="" DbObjectType="Unknown" GenerateShortCommands="true" GeneratorSourceName="DeleteFAQByID" Modifier="Public" Name="DeleteFAQByID" QueryType="NoData" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetDataBy" UserSourceName="DeleteFAQByID">
                 <UpdateCommand>
                   <DbCommand CommandType="Text" ModifiedByUser="true">
                     <CommandText>UPDATE FAQ Set [IsActive]=0 Where [ID]=@ID</CommandText>
@@ -46,7 +46,7 @@ and F.IsActive=1 and F.IsPublic=1</CommandText>
                   </DbCommand>
                 </UpdateCommand>
               </DbSource>
-              <DbSource ConnectionRef="FAQConnectionString (Web.config)" DbObjectType="Unknown" FillMethodModifier="Public" FillMethodName="FillAllFAQ" GenerateMethods="Both" GenerateShortCommands="true" GeneratorGetMethodName="GetAllFAQData" GeneratorSourceName="FillAllFAQ" GetMethodModifier="Public" GetMethodName="GetAllFAQData" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetAllFAQData" UserSourceName="FillAllFAQ">
+              <DbSource ConnectionRef="FAQConnectionString (Web.config)" DbObjectType="Unknown" FillMethodModifier="Public" FillMethodName="FillAllFAQ" GenerateMethods="Both" GenerateShortCommands="true" GeneratorGetMethodName="GetAllFAQData" GeneratorSourceName="FillAllFAQ" GetMethodModifier="Public" GetMethodName="GetAllFAQData" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetAllFAQData" UserSourceName="FillAllFAQ">
                 <SelectCommand>
                   <DbCommand CommandType="Text" ModifiedByUser="true">
                     <CommandText>Select F.*, S.Status, T.Topic from FAQ F, FAQStatuses S, FAQTopics T
@@ -56,7 +56,7 @@ and F.IsActive=1</CommandText>
                   </DbCommand>
                 </SelectCommand>
               </DbSource>
-              <DbSource ConnectionRef="FAQConnectionString (Web.config)" DbObjectName="FAQ.dbo.FAQ" DbObjectType="Table" FillMethodModifier="Public" FillMethodName="FillFAQByID" GenerateMethods="Both" GenerateShortCommands="true" GeneratorGetMethodName="GetFAWDataByID" GeneratorSourceName="FillFAQByID" GetMethodModifier="Public" GetMethodName="GetFAWDataByID" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetFAWDataByID" UserSourceName="FillFAQByID">
+              <DbSource ConnectionRef="FAQConnectionString (Web.config)" DbObjectName="FAQ.dbo.FAQ" DbObjectType="Table" FillMethodModifier="Public" FillMethodName="FillFAQByID" GenerateMethods="Both" GenerateShortCommands="true" GeneratorGetMethodName="GetFAWDataByID" GeneratorSourceName="FillFAQByID" GetMethodModifier="Public" GetMethodName="GetFAWDataByID" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetFAWDataByID" UserSourceName="FillFAQByID">
                 <SelectCommand>
                   <DbCommand CommandType="Text" ModifiedByUser="true">
                     <CommandText>SELECT * FROM FAQ WHERE (ID = @ID)</CommandText>
@@ -66,7 +66,7 @@ and F.IsActive=1</CommandText>
                   </DbCommand>
                 </SelectCommand>
               </DbSource>
-              <DbSource ConnectionRef="FAQConnectionString (Web.config)" DbObjectName="FAQ.dbo.FAQ" DbObjectType="Table" FillMethodModifier="Public" FillMethodName="FillFAQByTopicID" GenerateMethods="Both" GenerateShortCommands="true" GeneratorGetMethodName="GetFAQDataByTopicID" GeneratorSourceName="FillFAQByTopicID" GetMethodModifier="Public" GetMethodName="GetFAQDataByTopicID" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetFAQDataByTopicID" UserSourceName="FillFAQByTopicID">
+              <DbSource ConnectionRef="FAQConnectionString (Web.config)" DbObjectName="FAQ.dbo.FAQ" DbObjectType="Table" FillMethodModifier="Public" FillMethodName="FillFAQByTopicID" GenerateMethods="Both" GenerateShortCommands="true" GeneratorGetMethodName="GetFAQDataByTopicID" GeneratorSourceName="FillFAQByTopicID" GetMethodModifier="Public" GetMethodName="GetFAQDataByTopicID" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetFAQDataByTopicID" UserSourceName="FillFAQByTopicID">
                 <SelectCommand>
                   <DbCommand CommandType="Text" ModifiedByUser="true">
                     <CommandText>SELECT * FROM FAQ WHERE (TopicID = @TopicID) AND (IsActive = 1) AND (IsPublic = 1)</CommandText>
@@ -76,29 +76,29 @@ and F.IsActive=1</CommandText>
                   </DbCommand>
                 </SelectCommand>
               </DbSource>
-              <DbSource ConnectionRef="FAQConnectionString (Web.config)" DbObjectName="" DbObjectType="Unknown" GenerateShortCommands="true" GeneratorGetMethodName="GetDataBy" GeneratorSourceName="InsertQuestion" Modifier="Public" Name="InsertQuestion" QueryType="Scalar" ScalarCallRetval="System.Object, mscorlib, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetDataBy1" UserSourceName="InsertQuestion">
+              <DbSource ConnectionRef="FAQConnectionString (Web.config)" DbObjectName="" DbObjectType="Unknown" GenerateShortCommands="true" GeneratorGetMethodName="GetDataBy" GeneratorSourceName="InsertQuestion" Modifier="Public" Name="InsertQuestion" QueryType="NoData" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetDataBy1" UserSourceName="InsertQuestion">
                 <InsertCommand>
                   <DbCommand CommandType="Text" ModifiedByUser="true">
                     <CommandText>INSERT INTO FAQ
-                         (PreSalesUserID, DateCreated, TopicID, Question, Answer, IsPublic, StatusID, Keywords, Notes, IsActive)
-VALUES        (@PreSalesUserID,  @DateCreated, @TopicID, @Question, @Answer, @IsPublic, @StatusID, @Keywords, @Notes, @IsActive);
+                         (UserID, DateCreated, TopicID, Question, Answer, IsPublic, StatusID, Keywords, Notes, IsActive)
+VALUES        (@UserID,  @DateCreated, @TopicID, @Question, @Answer, @IsPublic, @StatusID, @Keywords, @Notes, @IsActive);
 Select @@Identity</CommandText>
                     <Parameters>
-                      <Parameter AllowDbNull="true" AutogeneratedName="PreSalesUserID" ColumnName="PreSalesUserID" DataSourceName="ITControlWebsite.dbo.FAQ" DataTypeServer="int" DbType="Int32" Direction="Input" ParameterName="@PreSalesUserID" Precision="0" ProviderType="Int" Scale="0" Size="4" SourceColumn="PreSalesUserID" SourceColumnNullMapping="false" SourceVersion="Current" />
-                      <Parameter AllowDbNull="false" AutogeneratedName="DateCreated" ColumnName="DateCreated" DataSourceName="ITControlWebsite.dbo.FAQ" DataTypeServer="datetime" DbType="DateTime" Direction="Input" ParameterName="@DateCreated" Precision="0" ProviderType="DateTime" Scale="0" Size="8" SourceColumn="DateCreated" SourceColumnNullMapping="false" SourceVersion="Current" />
-                      <Parameter AllowDbNull="false" AutogeneratedName="TopicID" ColumnName="TopicID" DataSourceName="ITControlWebsite.dbo.FAQ" DataTypeServer="int" DbType="Int32" Direction="Input" ParameterName="@TopicID" Precision="0" ProviderType="Int" Scale="0" Size="4" SourceColumn="TopicID" SourceColumnNullMapping="false" SourceVersion="Current" />
-                      <Parameter AllowDbNull="true" AutogeneratedName="Question" ColumnName="Question" DataSourceName="ITControlWebsite.dbo.FAQ" DataTypeServer="text" DbType="AnsiString" Direction="Input" ParameterName="@Question" Precision="0" ProviderType="Text" Scale="0" Size="2147483647" SourceColumn="Question" SourceColumnNullMapping="false" SourceVersion="Current" />
-                      <Parameter AllowDbNull="true" AutogeneratedName="Answer" ColumnName="Answer" DataSourceName="ITControlWebsite.dbo.FAQ" DataTypeServer="text" DbType="AnsiString" Direction="Input" ParameterName="@Answer" Precision="0" ProviderType="Text" Scale="0" Size="2147483647" SourceColumn="Answer" SourceColumnNullMapping="false" SourceVersion="Current" />
-                      <Parameter AllowDbNull="false" AutogeneratedName="IsPublic" ColumnName="IsPublic" DataSourceName="ITControlWebsite.dbo.FAQ" DataTypeServer="bit" DbType="Boolean" Direction="Input" ParameterName="@IsPublic" Precision="0" ProviderType="Bit" Scale="0" Size="1" SourceColumn="IsPublic" SourceColumnNullMapping="false" SourceVersion="Current" />
-                      <Parameter AllowDbNull="false" AutogeneratedName="StatusID" ColumnName="StatusID" DataSourceName="ITControlWebsite.dbo.FAQ" DataTypeServer="int" DbType="Int32" Direction="Input" ParameterName="@StatusID" Precision="0" ProviderType="Int" Scale="0" Size="4" SourceColumn="StatusID" SourceColumnNullMapping="false" SourceVersion="Current" />
-                      <Parameter AllowDbNull="true" AutogeneratedName="Keywords" ColumnName="Keywords" DataSourceName="ITControlWebsite.dbo.FAQ" DataTypeServer="nvarchar(100)" DbType="String" Direction="Input" ParameterName="@Keywords" Precision="0" ProviderType="NVarChar" Scale="0" Size="100" SourceColumn="Keywords" SourceColumnNullMapping="false" SourceVersion="Current" />
-                      <Parameter AllowDbNull="true" AutogeneratedName="Notes" ColumnName="Notes" DataSourceName="ITControlWebsite.dbo.FAQ" DataTypeServer="text" DbType="AnsiString" Direction="Input" ParameterName="@Notes" Precision="0" ProviderType="Text" Scale="0" Size="2147483647" SourceColumn="Notes" SourceColumnNullMapping="false" SourceVersion="Current" />
-                      <Parameter AllowDbNull="false" AutogeneratedName="IsActive" ColumnName="IsActive" DataSourceName="ITControlWebsite.dbo.FAQ" DataTypeServer="bit" DbType="Boolean" Direction="Input" ParameterName="@IsActive" Precision="0" ProviderType="Bit" Scale="0" Size="1" SourceColumn="IsActive" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="UserID" ColumnName="UserId" DataSourceName="FAQMan.dbo.FAQ" DataTypeServer="uniqueidentifier" DbType="Guid" Direction="Input" ParameterName="@UserID" Precision="0" ProviderType="UniqueIdentifier" Scale="0" Size="16" SourceColumn="UserId" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="DateCreated" ColumnName="DateCreated" DataSourceName="FAQMan.dbo.FAQ" DataTypeServer="datetime" DbType="DateTime" Direction="Input" ParameterName="@DateCreated" Precision="0" ProviderType="DateTime" Scale="0" Size="8" SourceColumn="DateCreated" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="false" AutogeneratedName="TopicID" ColumnName="TopicID" DataSourceName="FAQMan.dbo.FAQ" DataTypeServer="int" DbType="Int32" Direction="Input" ParameterName="@TopicID" Precision="0" ProviderType="Int" Scale="0" Size="4" SourceColumn="TopicID" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="Question" ColumnName="Question" DataSourceName="FAQMan.dbo.FAQ" DataTypeServer="nvarchar(MAX)" DbType="String" Direction="Input" ParameterName="@Question" Precision="0" ProviderType="NVarChar" Scale="0" Size="2147483647" SourceColumn="Question" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="Answer" ColumnName="Answer" DataSourceName="FAQMan.dbo.FAQ" DataTypeServer="nvarchar(MAX)" DbType="String" Direction="Input" ParameterName="@Answer" Precision="0" ProviderType="NVarChar" Scale="0" Size="2147483647" SourceColumn="Answer" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="IsPublic" ColumnName="IsPublic" DataSourceName="FAQMan.dbo.FAQ" DataTypeServer="bit" DbType="Boolean" Direction="Input" ParameterName="@IsPublic" Precision="0" ProviderType="Bit" Scale="0" Size="1" SourceColumn="IsPublic" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="false" AutogeneratedName="StatusID" ColumnName="StatusID" DataSourceName="FAQMan.dbo.FAQ" DataTypeServer="int" DbType="Int32" Direction="Input" ParameterName="@StatusID" Precision="0" ProviderType="Int" Scale="0" Size="4" SourceColumn="StatusID" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="Keywords" ColumnName="Keywords" DataSourceName="FAQMan.dbo.FAQ" DataTypeServer="nvarchar(MAX)" DbType="String" Direction="Input" ParameterName="@Keywords" Precision="0" ProviderType="NVarChar" Scale="0" Size="2147483647" SourceColumn="Keywords" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="Notes" ColumnName="Notes" DataSourceName="FAQMan.dbo.FAQ" DataTypeServer="nvarchar(MAX)" DbType="String" Direction="Input" ParameterName="@Notes" Precision="0" ProviderType="NVarChar" Scale="0" Size="2147483647" SourceColumn="Notes" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="IsActive" ColumnName="IsActive" DataSourceName="FAQMan.dbo.FAQ" DataTypeServer="bit" DbType="Boolean" Direction="Input" ParameterName="@IsActive" Precision="0" ProviderType="Bit" Scale="0" Size="1" SourceColumn="IsActive" SourceColumnNullMapping="false" SourceVersion="Current" />
                     </Parameters>
                   </DbCommand>
                 </InsertCommand>
               </DbSource>
-              <DbSource ConnectionRef="FAQConnectionString (Web.config)" DbObjectName="" DbObjectType="Unknown" GenerateShortCommands="true" GeneratorGetMethodName="GetDataBy1" GeneratorSourceName="UpdateFAQ" Modifier="Public" Name="UpdateFAQ" QueryType="NoData" ScalarCallRetval="System.Object, mscorlib, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetDataBy2" UserSourceName="UpdateFAQ">
+              <DbSource ConnectionRef="FAQConnectionString (Web.config)" DbObjectName="" DbObjectType="Unknown" GenerateShortCommands="true" GeneratorGetMethodName="GetDataBy1" GeneratorSourceName="UpdateFAQ" Modifier="Public" Name="UpdateFAQ" QueryType="NoData" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetDataBy2" UserSourceName="UpdateFAQ">
                 <UpdateCommand>
                   <DbCommand CommandType="Text" ModifiedByUser="true">
                     <CommandText>UPDATE [FAQ] SET [TopicID] = @TopicID, [Question] = @Question, [Answer] = @Answer, [IsPublic] = @IsPublic, [StatusID] = @StatusID, [Keywords] = @Keywords, [Notes] = @Notes, [IsActive] = @IsActive WHERE (([ID] = @Original_ID))</CommandText>
@@ -106,11 +106,11 @@ Select @@Identity</CommandText>
                       <Parameter AllowDbNull="false" AutogeneratedName="TopicID" ColumnName="TopicID" DataSourceName="ITControlWebsite.dbo.FAQ" DataTypeServer="int" DbType="Int32" Direction="Input" ParameterName="@TopicID" Precision="0" ProviderType="Int" Scale="0" Size="4" SourceColumn="TopicID" SourceColumnNullMapping="false" SourceVersion="Current" />
                       <Parameter AllowDbNull="true" AutogeneratedName="Question" ColumnName="Question" DataSourceName="ITControlWebsite.dbo.FAQ" DataTypeServer="text" DbType="AnsiString" Direction="Input" ParameterName="@Question" Precision="0" ProviderType="Text" Scale="0" Size="2147483647" SourceColumn="Question" SourceColumnNullMapping="false" SourceVersion="Current" />
                       <Parameter AllowDbNull="true" AutogeneratedName="Answer" ColumnName="Answer" DataSourceName="ITControlWebsite.dbo.FAQ" DataTypeServer="text" DbType="AnsiString" Direction="Input" ParameterName="@Answer" Precision="0" ProviderType="Text" Scale="0" Size="2147483647" SourceColumn="Answer" SourceColumnNullMapping="false" SourceVersion="Current" />
-                      <Parameter AllowDbNull="false" AutogeneratedName="IsPublic" ColumnName="IsPublic" DataSourceName="ITControlWebsite.dbo.FAQ" DataTypeServer="bit" DbType="Boolean" Direction="Input" ParameterName="@IsPublic" Precision="0" ProviderType="Bit" Scale="0" Size="1" SourceColumn="IsPublic" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="IsPublic" ColumnName="IsPublic" DataSourceName="ITControlWebsite.dbo.FAQ" DataTypeServer="bit" DbType="Boolean" Direction="Input" ParameterName="@IsPublic" Precision="0" ProviderType="Bit" Scale="0" Size="1" SourceColumn="IsPublic" SourceColumnNullMapping="false" SourceVersion="Current" />
                       <Parameter AllowDbNull="false" AutogeneratedName="StatusID" ColumnName="StatusID" DataSourceName="ITControlWebsite.dbo.FAQ" DataTypeServer="int" DbType="Int32" Direction="Input" ParameterName="@StatusID" Precision="0" ProviderType="Int" Scale="0" Size="4" SourceColumn="StatusID" SourceColumnNullMapping="false" SourceVersion="Current" />
                       <Parameter AllowDbNull="true" AutogeneratedName="Keywords" ColumnName="Keywords" DataSourceName="ITControlWebsite.dbo.FAQ" DataTypeServer="nvarchar(100)" DbType="String" Direction="Input" ParameterName="@Keywords" Precision="0" ProviderType="NVarChar" Scale="0" Size="100" SourceColumn="Keywords" SourceColumnNullMapping="false" SourceVersion="Current" />
                       <Parameter AllowDbNull="true" AutogeneratedName="Notes" ColumnName="Notes" DataSourceName="ITControlWebsite.dbo.FAQ" DataTypeServer="text" DbType="AnsiString" Direction="Input" ParameterName="@Notes" Precision="0" ProviderType="Text" Scale="0" Size="2147483647" SourceColumn="Notes" SourceColumnNullMapping="false" SourceVersion="Current" />
-                      <Parameter AllowDbNull="false" AutogeneratedName="IsActive" ColumnName="IsActive" DataSourceName="ITControlWebsite.dbo.FAQ" DataTypeServer="bit" DbType="Boolean" Direction="Input" ParameterName="@IsActive" Precision="0" ProviderType="Bit" Scale="0" Size="1" SourceColumn="IsActive" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="IsActive" ColumnName="IsActive" DataSourceName="ITControlWebsite.dbo.FAQ" DataTypeServer="bit" DbType="Boolean" Direction="Input" ParameterName="@IsActive" Precision="0" ProviderType="Bit" Scale="0" Size="1" SourceColumn="IsActive" SourceColumnNullMapping="false" SourceVersion="Current" />
                       <Parameter AllowDbNull="false" AutogeneratedName="Original_ID" ColumnName="ID" DataSourceName="ITControlWebsite.dbo.FAQ" DataTypeServer="int" DbType="Int32" Direction="Input" ParameterName="@Original_ID" Precision="0" ProviderType="Int" Scale="0" Size="4" SourceColumn="ID" SourceColumnNullMapping="false" SourceVersion="Original" />
                     </Parameters>
                   </DbCommand>
@@ -120,7 +120,7 @@ Select @@Identity</CommandText>
           </TableAdapter>
           <TableAdapter BaseClass="System.ComponentModel.Component" DataAccessorModifier="AutoLayout, AnsiClass, Class, Public" DataAccessorName="FAQStatusesTableAdapter" GeneratorDataComponentClassName="FAQStatusesTableAdapter" Name="FAQStatuses" UserDataComponentName="FAQStatusesTableAdapter">
             <MainSource>
-              <DbSource ConnectionRef="FAQConnectionString (Web.config)" DbObjectName="ITControlWebsite.dbo.FAQStatuses" DbObjectType="Table" FillMethodModifier="Public" FillMethodName="FillFAQStatuses" GenerateMethods="Both" GenerateShortCommands="true" GeneratorGetMethodName="GetFAQStatusesData" GeneratorSourceName="FillFAQStatuses" GetMethodModifier="Public" GetMethodName="GetFAQStatusesData" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="false" UserGetMethodName="GetFAQStatusesData" UserSourceName="FillFAQStatuses">
+              <DbSource ConnectionRef="FAQConnectionString (Web.config)" DbObjectName="ITControlWebsite.dbo.FAQStatuses" DbObjectType="Table" FillMethodModifier="Public" FillMethodName="FillFAQStatuses" GenerateMethods="Both" GenerateShortCommands="true" GeneratorGetMethodName="GetFAQStatusesData" GeneratorSourceName="FillFAQStatuses" GetMethodModifier="Public" GetMethodName="GetFAQStatusesData" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="false" UserGetMethodName="GetFAQStatusesData" UserSourceName="FillFAQStatuses">
                 <DeleteCommand>
                   <DbCommand CommandType="Text" ModifiedByUser="false">
                     <CommandText>DELETE FROM [FAQStatuses] WHERE (([ID] = @Original_ID))</CommandText>
@@ -159,7 +159,7 @@ Select @@Identity</CommandText>
               <Mapping SourceColumn="Status" DataSetColumn="Status" />
             </Mappings>
             <Sources>
-              <DbSource ConnectionRef="FAQConnectionString (Web.config)" DbObjectName="ITControlWebsite.dbo.FAQStatuses" DbObjectType="Table" GenerateShortCommands="true" GeneratorSourceName="GetStatusIDByStatus" Modifier="Public" Name="GetStatusIDByStatus" QueryType="Scalar" ScalarCallRetval="System.Int32, mscorlib, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetDataBy" UserSourceName="GetStatusIDByStatus">
+              <DbSource ConnectionRef="FAQConnectionString (Web.config)" DbObjectName="ITControlWebsite.dbo.FAQStatuses" DbObjectType="Table" GenerateShortCommands="true" GeneratorSourceName="GetStatusIDByStatus" Modifier="Public" Name="GetStatusIDByStatus" QueryType="Scalar" ScalarCallRetval="System.Int32, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetDataBy" UserSourceName="GetStatusIDByStatus">
                 <SelectCommand>
                   <DbCommand CommandType="Text" ModifiedByUser="true">
                     <CommandText>SELECT ID FROM FAQStatuses Where Status=@Status</CommandText>
@@ -173,7 +173,7 @@ Select @@Identity</CommandText>
           </TableAdapter>
           <TableAdapter BaseClass="System.ComponentModel.Component" DataAccessorModifier="AutoLayout, AnsiClass, Class, Public" DataAccessorName="FAQTopicsTableAdapter" GeneratorDataComponentClassName="FAQTopicsTableAdapter" Name="FAQTopics" UserDataComponentName="FAQTopicsTableAdapter">
             <MainSource>
-              <DbSource ConnectionRef="FAQConnectionString (Web.config)" DbObjectName="ITControlWebsite.dbo.FAQTopics" DbObjectType="Table" FillMethodModifier="Public" FillMethodName="FillFAQTopics" GenerateMethods="Both" GenerateShortCommands="false" GeneratorGetMethodName="GetFAQTopicsData" GeneratorSourceName="FillFAQTopics" GetMethodModifier="Public" GetMethodName="GetFAQTopicsData" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="false" UserGetMethodName="GetFAQTopicsData" UserSourceName="FillFAQTopics">
+              <DbSource ConnectionRef="FAQConnectionString (Web.config)" DbObjectName="ITControlWebsite.dbo.FAQTopics" DbObjectType="Table" FillMethodModifier="Public" FillMethodName="FillFAQTopics" GenerateMethods="Both" GenerateShortCommands="false" GeneratorGetMethodName="GetFAQTopicsData" GeneratorSourceName="FillFAQTopics" GetMethodModifier="Public" GetMethodName="GetFAQTopicsData" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="false" UserGetMethodName="GetFAQTopicsData" UserSourceName="FillFAQTopics">
                 <SelectCommand>
                   <DbCommand CommandType="Text" ModifiedByUser="true">
                     <CommandText>Select * from FAQTopics Where IsActive=1</CommandText>
@@ -189,7 +189,7 @@ Select @@Identity</CommandText>
               <Mapping SourceColumn="IsActive" DataSetColumn="IsActive" />
             </Mappings>
             <Sources>
-              <DbSource ConnectionRef="FAQConnectionString (Web.config)" DbObjectName="ITControlWebsite.dbo.FAQTopics" DbObjectType="Table" FillMethodModifier="Public" FillMethodName="FillAllFAQTopics" GenerateMethods="Both" GenerateShortCommands="true" GeneratorGetMethodName="AllFAQTopics" GeneratorSourceName="FillAllFAQTopics" GetMethodModifier="Public" GetMethodName="AllFAQTopics" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="AllFAQTopics" UserSourceName="FillAllFAQTopics">
+              <DbSource ConnectionRef="FAQConnectionString (Web.config)" DbObjectName="ITControlWebsite.dbo.FAQTopics" DbObjectType="Table" FillMethodModifier="Public" FillMethodName="FillAllFAQTopics" GenerateMethods="Both" GenerateShortCommands="true" GeneratorGetMethodName="AllFAQTopics" GeneratorSourceName="FillAllFAQTopics" GetMethodModifier="Public" GetMethodName="AllFAQTopics" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="AllFAQTopics" UserSourceName="FillAllFAQTopics">
                 <SelectCommand>
                   <DbCommand CommandType="Text" ModifiedByUser="true">
                     <CommandText>Select * from FAQTopics</CommandText>
@@ -197,7 +197,7 @@ Select @@Identity</CommandText>
                   </DbCommand>
                 </SelectCommand>
               </DbSource>
-              <DbSource ConnectionRef="FAQConnectionString (Web.config)" DbObjectName="ITControlWebsite.dbo.FAQTopics" DbObjectType="Table" FillMethodModifier="Public" FillMethodName="FillTopicByTopicID" GenerateMethods="Both" GenerateShortCommands="true" GeneratorGetMethodName="GetTopicDataByTopicID" GeneratorSourceName="FillTopicByTopicID" GetMethodModifier="Public" GetMethodName="GetTopicDataByTopicID" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetTopicDataByTopicID" UserSourceName="FillTopicByTopicID">
+              <DbSource ConnectionRef="FAQConnectionString (Web.config)" DbObjectName="ITControlWebsite.dbo.FAQTopics" DbObjectType="Table" FillMethodModifier="Public" FillMethodName="FillTopicByTopicID" GenerateMethods="Both" GenerateShortCommands="true" GeneratorGetMethodName="GetTopicDataByTopicID" GeneratorSourceName="FillTopicByTopicID" GetMethodModifier="Public" GetMethodName="GetTopicDataByTopicID" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetTopicDataByTopicID" UserSourceName="FillTopicByTopicID">
                 <SelectCommand>
                   <DbCommand CommandType="Text" ModifiedByUser="true">
                     <CommandText>Select * from FAQTopics Where ID=@TopicID</CommandText>
@@ -207,7 +207,7 @@ Select @@Identity</CommandText>
                   </DbCommand>
                 </SelectCommand>
               </DbSource>
-              <DbSource ConnectionRef="FAQConnectionString (Web.config)" DbObjectName="ITControlWebsite.dbo.FAQTopics" DbObjectType="Table" GenerateShortCommands="true" GeneratorSourceName="GetTopicIDByTopic" Modifier="Public" Name="GetTopicIDByTopic" QueryType="Scalar" ScalarCallRetval="System.Int32, mscorlib, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetDataBy" UserSourceName="GetTopicIDByTopic">
+              <DbSource ConnectionRef="FAQConnectionString (Web.config)" DbObjectName="ITControlWebsite.dbo.FAQTopics" DbObjectType="Table" GenerateShortCommands="true" GeneratorSourceName="GetTopicIDByTopic" Modifier="Public" Name="GetTopicIDByTopic" QueryType="Scalar" ScalarCallRetval="System.Int32, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetDataBy" UserSourceName="GetTopicIDByTopic">
                 <SelectCommand>
                   <DbCommand CommandType="Text" ModifiedByUser="true">
                     <CommandText>SELECT ID FROM FAQTopics Where Topic=@Topic</CommandText>
@@ -217,7 +217,7 @@ Select @@Identity</CommandText>
                   </DbCommand>
                 </SelectCommand>
               </DbSource>
-              <DbSource ConnectionRef="FAQConnectionString (Web.config)" DbObjectName="" DbObjectType="Unknown" GenerateShortCommands="true" GeneratorSourceName="InsertTopic" Modifier="Public" Name="InsertTopic" QueryType="NoData" ScalarCallRetval="System.Object, mscorlib, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetDataBy1" UserSourceName="InsertTopic">
+              <DbSource ConnectionRef="FAQConnectionString (Web.config)" DbObjectName="" DbObjectType="Unknown" GenerateShortCommands="true" GeneratorSourceName="InsertTopic" Modifier="Public" Name="InsertTopic" QueryType="NoData" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetDataBy1" UserSourceName="InsertTopic">
                 <InsertCommand>
                   <DbCommand CommandType="Text" ModifiedByUser="true">
                     <CommandText>INSERT INTO FAQTopics (Topic, TopicDescription, IsActive) 
@@ -230,7 +230,7 @@ VALUES (@Topic, @TopicDescription, @IsActive) </CommandText>
                   </DbCommand>
                 </InsertCommand>
               </DbSource>
-              <DbSource ConnectionRef="FAQConnectionString (Web.config)" DbObjectName="" DbObjectType="Unknown" GenerateShortCommands="true" GeneratorGetMethodName="GetDataBy1" GeneratorSourceName="UpdateTopicByID" Modifier="Public" Name="UpdateTopicByID" QueryType="NoData" ScalarCallRetval="System.Object, mscorlib, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetDataBy2" UserSourceName="UpdateTopicByID">
+              <DbSource ConnectionRef="FAQConnectionString (Web.config)" DbObjectName="" DbObjectType="Unknown" GenerateShortCommands="true" GeneratorGetMethodName="GetDataBy1" GeneratorSourceName="UpdateTopicByID" Modifier="Public" Name="UpdateTopicByID" QueryType="NoData" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetDataBy2" UserSourceName="UpdateTopicByID">
                 <UpdateCommand>
                   <DbCommand CommandType="Text" ModifiedByUser="true">
                     <CommandText>UPDATE FAQTopics SET [Topic] = @Topic, [TopicDescription] = @TopicDexcription, [IsActive] = @IsActive Where [ID] = @ID</CommandText>
@@ -250,69 +250,69 @@ VALUES (@Topic, @TopicDescription, @IsActive) </CommandText>
       </DataSource>
     </xs:appinfo>
   </xs:annotation>
-  <xs:element name="FAQ" msdata:IsDataSet="true" msdata:UseCurrentLocale="true" msprop:Generator_UserDSName="FAQ" msprop:Generator_DataSetName="FAQ">
+  <xs:element name="FAQ" msdata:IsDataSet="true" msdata:UseCurrentLocale="true" msprop:Generator_DataSetName="FAQ" msprop:Generator_UserDSName="FAQ">
     <xs:complexType>
       <xs:choice minOccurs="0" maxOccurs="unbounded">
-        <xs:element name="FAQ" msprop:Generator_UserTableName="FAQ" msprop:Generator_RowDeletedName="FAQRowDeleted" msprop:Generator_RowChangedName="FAQRowChanged" msprop:Generator_RowClassName="FAQRow" msprop:Generator_RowChangingName="FAQRowChanging" msprop:Generator_RowEvArgName="FAQRowChangeEvent" msprop:Generator_RowEvHandlerName="FAQRowChangeEventHandler" msprop:Generator_TableClassName="FAQDataTable" msprop:Generator_TableVarName="tableFAQ" msprop:Generator_RowDeletingName="FAQRowDeleting" msprop:Generator_TablePropName="_FAQ">
+        <xs:element name="FAQ" msprop:Generator_UserTableName="FAQ" msprop:Generator_RowEvArgName="FAQRowChangeEvent" msprop:Generator_TableVarName="tableFAQ" msprop:Generator_TablePropName="_FAQ" msprop:Generator_RowDeletingName="FAQRowDeleting" msprop:Generator_RowChangingName="FAQRowChanging" msprop:Generator_RowDeletedName="FAQRowDeleted" msprop:Generator_RowEvHandlerName="FAQRowChangeEventHandler" msprop:Generator_TableClassName="FAQDataTable" msprop:Generator_RowChangedName="FAQRowChanged" msprop:Generator_RowClassName="FAQRow">
           <xs:complexType>
             <xs:sequence>
-              <xs:element name="ID" msdata:ReadOnly="true" msdata:AutoIncrement="true" msdata:AutoIncrementSeed="-1" msdata:AutoIncrementStep="-1" msprop:Generator_UserColumnName="ID" msprop:Generator_ColumnPropNameInRow="ID" msprop:Generator_ColumnVarNameInTable="columnID" msprop:Generator_ColumnPropNameInTable="IDColumn" type="xs:int" />
-              <xs:element name="TopicID" msprop:Generator_UserColumnName="TopicID" msprop:Generator_ColumnPropNameInRow="TopicID" msprop:Generator_ColumnVarNameInTable="columnTopicID" msprop:Generator_ColumnPropNameInTable="TopicIDColumn" type="xs:int" />
-              <xs:element name="Question" msprop:Generator_UserColumnName="Question" msprop:Generator_ColumnPropNameInRow="Question" msprop:Generator_ColumnVarNameInTable="columnQuestion" msprop:Generator_ColumnPropNameInTable="QuestionColumn" minOccurs="0">
+              <xs:element name="ID" msdata:ReadOnly="true" msdata:AutoIncrement="true" msdata:AutoIncrementSeed="-1" msdata:AutoIncrementStep="-1" msprop:Generator_ColumnVarNameInTable="columnID" msprop:Generator_ColumnPropNameInRow="ID" msprop:Generator_ColumnPropNameInTable="IDColumn" msprop:Generator_UserColumnName="ID" type="xs:int" />
+              <xs:element name="TopicID" msprop:Generator_ColumnVarNameInTable="columnTopicID" msprop:Generator_ColumnPropNameInRow="TopicID" msprop:Generator_ColumnPropNameInTable="TopicIDColumn" msprop:Generator_UserColumnName="TopicID" type="xs:int" />
+              <xs:element name="Question" msprop:Generator_ColumnVarNameInTable="columnQuestion" msprop:Generator_ColumnPropNameInRow="Question" msprop:Generator_ColumnPropNameInTable="QuestionColumn" msprop:Generator_UserColumnName="Question" minOccurs="0">
                 <xs:simpleType>
                   <xs:restriction base="xs:string">
                     <xs:maxLength value="2147483647" />
                   </xs:restriction>
                 </xs:simpleType>
               </xs:element>
-              <xs:element name="Answer" msprop:Generator_UserColumnName="Answer" msprop:Generator_ColumnPropNameInRow="Answer" msprop:Generator_ColumnVarNameInTable="columnAnswer" msprop:Generator_ColumnPropNameInTable="AnswerColumn" minOccurs="0">
+              <xs:element name="Answer" msprop:Generator_ColumnVarNameInTable="columnAnswer" msprop:Generator_ColumnPropNameInRow="Answer" msprop:Generator_ColumnPropNameInTable="AnswerColumn" msprop:Generator_UserColumnName="Answer" minOccurs="0">
                 <xs:simpleType>
                   <xs:restriction base="xs:string">
                     <xs:maxLength value="2147483647" />
                   </xs:restriction>
                 </xs:simpleType>
               </xs:element>
-              <xs:element name="IsPublic" msprop:Generator_UserColumnName="IsPublic" msprop:Generator_ColumnPropNameInRow="IsPublic" msprop:Generator_ColumnVarNameInTable="columnIsPublic" msprop:Generator_ColumnPropNameInTable="IsPublicColumn" type="xs:boolean" />
-              <xs:element name="StatusID" msprop:Generator_UserColumnName="StatusID" msprop:Generator_ColumnPropNameInRow="StatusID" msprop:Generator_ColumnVarNameInTable="columnStatusID" msprop:Generator_ColumnPropNameInTable="StatusIDColumn" type="xs:int" />
-              <xs:element name="Status" msprop:Generator_UserColumnName="Status" msprop:Generator_ColumnPropNameInRow="Status" msprop:Generator_ColumnVarNameInTable="columnStatus" msprop:Generator_ColumnPropNameInTable="StatusColumn" minOccurs="0">
+              <xs:element name="IsPublic" msprop:Generator_ColumnVarNameInTable="columnIsPublic" msprop:Generator_ColumnPropNameInRow="IsPublic" msprop:Generator_ColumnPropNameInTable="IsPublicColumn" msprop:Generator_UserColumnName="IsPublic" type="xs:boolean" minOccurs="0" />
+              <xs:element name="StatusID" msprop:Generator_ColumnVarNameInTable="columnStatusID" msprop:Generator_ColumnPropNameInRow="StatusID" msprop:Generator_ColumnPropNameInTable="StatusIDColumn" msprop:Generator_UserColumnName="StatusID" type="xs:int" />
+              <xs:element name="Status" msprop:Generator_ColumnVarNameInTable="columnStatus" msprop:Generator_ColumnPropNameInRow="Status" msprop:Generator_ColumnPropNameInTable="StatusColumn" msprop:Generator_UserColumnName="Status" minOccurs="0">
                 <xs:simpleType>
                   <xs:restriction base="xs:string">
                     <xs:maxLength value="75" />
                   </xs:restriction>
                 </xs:simpleType>
               </xs:element>
-              <xs:element name="Topic" msprop:Generator_UserColumnName="Topic" msprop:Generator_ColumnPropNameInRow="Topic" msprop:Generator_ColumnVarNameInTable="columnTopic" msprop:Generator_ColumnPropNameInTable="TopicColumn" minOccurs="0">
+              <xs:element name="Topic" msprop:Generator_ColumnVarNameInTable="columnTopic" msprop:Generator_ColumnPropNameInRow="Topic" msprop:Generator_ColumnPropNameInTable="TopicColumn" msprop:Generator_UserColumnName="Topic" minOccurs="0">
                 <xs:simpleType>
                   <xs:restriction base="xs:string">
                     <xs:maxLength value="100" />
                   </xs:restriction>
                 </xs:simpleType>
               </xs:element>
-              <xs:element name="IsActive" msprop:Generator_UserColumnName="IsActive" msprop:Generator_ColumnPropNameInRow="IsActive" msprop:Generator_ColumnVarNameInTable="columnIsActive" msprop:Generator_ColumnPropNameInTable="IsActiveColumn" type="xs:boolean" />
-              <xs:element name="Notes" msprop:Generator_UserColumnName="Notes" msprop:nullValue="_empty" msprop:Generator_ColumnPropNameInRow="Notes" msprop:Generator_ColumnPropNameInTable="NotesColumn" msprop:Generator_ColumnVarNameInTable="columnNotes" minOccurs="0">
+              <xs:element name="IsActive" msprop:Generator_ColumnVarNameInTable="columnIsActive" msprop:Generator_ColumnPropNameInRow="IsActive" msprop:Generator_ColumnPropNameInTable="IsActiveColumn" msprop:Generator_UserColumnName="IsActive" type="xs:boolean" minOccurs="0" />
+              <xs:element name="Notes" msprop:nullValue="_empty" msprop:Generator_ColumnPropNameInRow="Notes" msprop:Generator_ColumnVarNameInTable="columnNotes" msprop:Generator_ColumnPropNameInTable="NotesColumn" msprop:Generator_UserColumnName="Notes" minOccurs="0">
                 <xs:simpleType>
                   <xs:restriction base="xs:string">
                     <xs:maxLength value="2147483647" />
                   </xs:restriction>
                 </xs:simpleType>
               </xs:element>
-              <xs:element name="Keywords" msprop:Generator_UserColumnName="Keywords" msprop:nullValue="_empty" msprop:Generator_ColumnVarNameInTable="columnKeywords" msprop:Generator_ColumnPropNameInTable="KeywordsColumn" msprop:Generator_ColumnPropNameInRow="Keywords" minOccurs="0">
+              <xs:element name="Keywords" msprop:nullValue="_empty" msprop:Generator_ColumnPropNameInRow="Keywords" msprop:Generator_ColumnVarNameInTable="columnKeywords" msprop:Generator_ColumnPropNameInTable="KeywordsColumn" msprop:Generator_UserColumnName="Keywords" minOccurs="0">
                 <xs:simpleType>
                   <xs:restriction base="xs:string">
                     <xs:maxLength value="100" />
                   </xs:restriction>
                 </xs:simpleType>
               </xs:element>
-              <xs:element name="DateCreated" msprop:Generator_UserColumnName="DateCreated" msprop:Generator_ColumnVarNameInTable="columnDateCreated" msprop:Generator_ColumnPropNameInRow="DateCreated" msprop:Generator_ColumnPropNameInTable="DateCreatedColumn" type="xs:dateTime" />
-              <xs:element name="UserId" msdata:DataType="System.Guid, mscorlib, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" msprop:Generator_UserColumnName="UserId" msprop:Generator_ColumnPropNameInRow="UserId" msprop:Generator_ColumnVarNameInTable="columnUserId" msprop:Generator_ColumnPropNameInTable="UserIdColumn" type="xs:string" minOccurs="0" />
+              <xs:element name="DateCreated" msprop:Generator_ColumnVarNameInTable="columnDateCreated" msprop:Generator_ColumnPropNameInRow="DateCreated" msprop:Generator_ColumnPropNameInTable="DateCreatedColumn" msprop:Generator_UserColumnName="DateCreated" type="xs:dateTime" minOccurs="0" />
+              <xs:element name="UserId" msdata:DataType="System.Guid, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" msprop:Generator_ColumnVarNameInTable="columnUserId" msprop:Generator_ColumnPropNameInRow="UserId" msprop:Generator_ColumnPropNameInTable="UserIdColumn" msprop:Generator_UserColumnName="UserId" type="xs:string" minOccurs="0" />
             </xs:sequence>
           </xs:complexType>
         </xs:element>
-        <xs:element name="FAQStatuses" msprop:Generator_UserTableName="FAQStatuses" msprop:Generator_RowDeletedName="FAQStatusesRowDeleted" msprop:Generator_RowChangedName="FAQStatusesRowChanged" msprop:Generator_RowClassName="FAQStatusesRow" msprop:Generator_RowChangingName="FAQStatusesRowChanging" msprop:Generator_RowEvArgName="FAQStatusesRowChangeEvent" msprop:Generator_RowEvHandlerName="FAQStatusesRowChangeEventHandler" msprop:Generator_TableClassName="FAQStatusesDataTable" msprop:Generator_TableVarName="tableFAQStatuses" msprop:Generator_RowDeletingName="FAQStatusesRowDeleting" msprop:Generator_TablePropName="FAQStatuses">
+        <xs:element name="FAQStatuses" msprop:Generator_UserTableName="FAQStatuses" msprop:Generator_RowEvArgName="FAQStatusesRowChangeEvent" msprop:Generator_TableVarName="tableFAQStatuses" msprop:Generator_TablePropName="FAQStatuses" msprop:Generator_RowDeletingName="FAQStatusesRowDeleting" msprop:Generator_RowChangingName="FAQStatusesRowChanging" msprop:Generator_RowDeletedName="FAQStatusesRowDeleted" msprop:Generator_RowEvHandlerName="FAQStatusesRowChangeEventHandler" msprop:Generator_TableClassName="FAQStatusesDataTable" msprop:Generator_RowChangedName="FAQStatusesRowChanged" msprop:Generator_RowClassName="FAQStatusesRow">
           <xs:complexType>
             <xs:sequence>
-              <xs:element name="ID" msdata:ReadOnly="true" msdata:AutoIncrement="true" msdata:AutoIncrementSeed="-1" msdata:AutoIncrementStep="-1" msprop:Generator_UserColumnName="ID" msprop:Generator_ColumnPropNameInRow="ID" msprop:Generator_ColumnVarNameInTable="columnID" msprop:Generator_ColumnPropNameInTable="IDColumn" type="xs:int" />
-              <xs:element name="Status" msprop:Generator_UserColumnName="Status" msprop:Generator_ColumnPropNameInRow="Status" msprop:Generator_ColumnVarNameInTable="columnStatus" msprop:Generator_ColumnPropNameInTable="StatusColumn" minOccurs="0">
+              <xs:element name="ID" msdata:ReadOnly="true" msdata:AutoIncrement="true" msdata:AutoIncrementSeed="-1" msdata:AutoIncrementStep="-1" msprop:Generator_ColumnVarNameInTable="columnID" msprop:Generator_ColumnPropNameInRow="ID" msprop:Generator_ColumnPropNameInTable="IDColumn" msprop:Generator_UserColumnName="ID" type="xs:int" />
+              <xs:element name="Status" msprop:Generator_ColumnVarNameInTable="columnStatus" msprop:Generator_ColumnPropNameInRow="Status" msprop:Generator_ColumnPropNameInTable="StatusColumn" msprop:Generator_UserColumnName="Status" minOccurs="0">
                 <xs:simpleType>
                   <xs:restriction base="xs:string">
                     <xs:maxLength value="75" />
@@ -322,25 +322,25 @@ VALUES (@Topic, @TopicDescription, @IsActive) </CommandText>
             </xs:sequence>
           </xs:complexType>
         </xs:element>
-        <xs:element name="FAQTopics" msprop:Generator_UserTableName="FAQTopics" msprop:Generator_RowDeletedName="FAQTopicsRowDeleted" msprop:Generator_RowChangedName="FAQTopicsRowChanged" msprop:Generator_RowClassName="FAQTopicsRow" msprop:Generator_RowChangingName="FAQTopicsRowChanging" msprop:Generator_RowEvArgName="FAQTopicsRowChangeEvent" msprop:Generator_RowEvHandlerName="FAQTopicsRowChangeEventHandler" msprop:Generator_TableClassName="FAQTopicsDataTable" msprop:Generator_TableVarName="tableFAQTopics" msprop:Generator_RowDeletingName="FAQTopicsRowDeleting" msprop:Generator_TablePropName="FAQTopics">
+        <xs:element name="FAQTopics" msprop:Generator_UserTableName="FAQTopics" msprop:Generator_RowEvArgName="FAQTopicsRowChangeEvent" msprop:Generator_TableVarName="tableFAQTopics" msprop:Generator_TablePropName="FAQTopics" msprop:Generator_RowDeletingName="FAQTopicsRowDeleting" msprop:Generator_RowChangingName="FAQTopicsRowChanging" msprop:Generator_RowDeletedName="FAQTopicsRowDeleted" msprop:Generator_RowEvHandlerName="FAQTopicsRowChangeEventHandler" msprop:Generator_TableClassName="FAQTopicsDataTable" msprop:Generator_RowChangedName="FAQTopicsRowChanged" msprop:Generator_RowClassName="FAQTopicsRow">
           <xs:complexType>
             <xs:sequence>
-              <xs:element name="ID" msdata:ReadOnly="true" msdata:AutoIncrement="true" msdata:AutoIncrementSeed="-1" msdata:AutoIncrementStep="-1" msprop:Generator_UserColumnName="ID" msprop:Generator_ColumnPropNameInRow="ID" msprop:Generator_ColumnVarNameInTable="columnID" msprop:Generator_ColumnPropNameInTable="IDColumn" type="xs:int" />
-              <xs:element name="Topic" msprop:Generator_UserColumnName="Topic" msprop:Generator_ColumnPropNameInRow="Topic" msprop:Generator_ColumnVarNameInTable="columnTopic" msprop:Generator_ColumnPropNameInTable="TopicColumn" minOccurs="0">
+              <xs:element name="ID" msdata:ReadOnly="true" msdata:AutoIncrement="true" msdata:AutoIncrementSeed="-1" msdata:AutoIncrementStep="-1" msprop:Generator_ColumnVarNameInTable="columnID" msprop:Generator_ColumnPropNameInRow="ID" msprop:Generator_ColumnPropNameInTable="IDColumn" msprop:Generator_UserColumnName="ID" type="xs:int" />
+              <xs:element name="Topic" msprop:Generator_ColumnVarNameInTable="columnTopic" msprop:Generator_ColumnPropNameInRow="Topic" msprop:Generator_ColumnPropNameInTable="TopicColumn" msprop:Generator_UserColumnName="Topic" minOccurs="0">
                 <xs:simpleType>
                   <xs:restriction base="xs:string">
                     <xs:maxLength value="100" />
                   </xs:restriction>
                 </xs:simpleType>
               </xs:element>
-              <xs:element name="TopicDescription" msprop:Generator_UserColumnName="TopicDescription" msprop:Generator_ColumnPropNameInRow="TopicDescription" msprop:Generator_ColumnVarNameInTable="columnTopicDescription" msprop:Generator_ColumnPropNameInTable="TopicDescriptionColumn" minOccurs="0">
+              <xs:element name="TopicDescription" msprop:Generator_ColumnVarNameInTable="columnTopicDescription" msprop:Generator_ColumnPropNameInRow="TopicDescription" msprop:Generator_ColumnPropNameInTable="TopicDescriptionColumn" msprop:Generator_UserColumnName="TopicDescription" minOccurs="0">
                 <xs:simpleType>
                   <xs:restriction base="xs:string">
                     <xs:maxLength value="2147483647" />
                   </xs:restriction>
                 </xs:simpleType>
               </xs:element>
-              <xs:element name="IsActive" msprop:Generator_UserColumnName="IsActive" msprop:Generator_ColumnPropNameInRow="IsActive" msprop:Generator_ColumnVarNameInTable="columnIsActive" msprop:Generator_ColumnPropNameInTable="IsActiveColumn" type="xs:boolean" />
+              <xs:element name="IsActive" msprop:Generator_ColumnVarNameInTable="columnIsActive" msprop:Generator_ColumnPropNameInRow="IsActive" msprop:Generator_ColumnPropNameInTable="IsActiveColumn" msprop:Generator_UserColumnName="IsActive" type="xs:boolean" />
             </xs:sequence>
           </xs:complexType>
         </xs:element>
@@ -361,8 +361,8 @@ VALUES (@Topic, @TopicDescription, @IsActive) </CommandText>
   </xs:element>
   <xs:annotation>
     <xs:appinfo>
-      <msdata:Relationship name="FK_FAQ_FAQStatuses" msdata:parent="FAQStatuses" msdata:child="FAQ" msdata:parentkey="ID" msdata:childkey="StatusID" msprop:Generator_UserRelationName="FK_FAQ_FAQStatuses" msprop:Generator_RelationVarName="relationFK_FAQ_FAQStatuses" msprop:Generator_UserChildTable="FAQ" msprop:Generator_UserParentTable="FAQStatuses" msprop:Generator_ParentPropName="FAQStatusesRow" msprop:Generator_ChildPropName="GetFAQRows" />
-      <msdata:Relationship name="FK_FAQ_FAQTopics" msdata:parent="FAQTopics" msdata:child="FAQ" msdata:parentkey="ID" msdata:childkey="TopicID" msprop:Generator_UserRelationName="FK_FAQ_FAQTopics" msprop:Generator_RelationVarName="relationFK_FAQ_FAQTopics" msprop:Generator_UserChildTable="FAQ" msprop:Generator_UserParentTable="FAQTopics" msprop:Generator_ParentPropName="FAQTopicsRow" msprop:Generator_ChildPropName="GetFAQRows" />
+      <msdata:Relationship name="FK_FAQ_FAQStatuses" msdata:parent="FAQStatuses" msdata:child="FAQ" msdata:parentkey="ID" msdata:childkey="StatusID" msprop:Generator_UserChildTable="FAQ" msprop:Generator_ChildPropName="GetFAQRows" msprop:Generator_UserRelationName="FK_FAQ_FAQStatuses" msprop:Generator_RelationVarName="relationFK_FAQ_FAQStatuses" msprop:Generator_UserParentTable="FAQStatuses" msprop:Generator_ParentPropName="FAQStatusesRow" />
+      <msdata:Relationship name="FK_FAQ_FAQTopics" msdata:parent="FAQTopics" msdata:child="FAQ" msdata:parentkey="ID" msdata:childkey="TopicID" msprop:Generator_UserChildTable="FAQ" msprop:Generator_ChildPropName="GetFAQRows" msprop:Generator_UserRelationName="FK_FAQ_FAQTopics" msprop:Generator_RelationVarName="relationFK_FAQ_FAQTopics" msprop:Generator_UserParentTable="FAQTopics" msprop:Generator_ParentPropName="FAQTopicsRow" />
     </xs:appinfo>
   </xs:annotation>
 </xs:schema>
